@@ -5,6 +5,13 @@
 <link rel="stylesheet" href="css/contact_form.css" />
 <script src="contact_form.js"></script>
 
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Richiesta inviata...');
+  });
+</script>
 
 </head>
 <body>
@@ -32,18 +39,11 @@
 <label>Email: <span>*</span></label>
 <input type="text" name="entry.1196832965" id="entry.1196832965" placeholder="xx@xx.xx"/>
 <label>Messaggio: <span>*</span></label>
-<textarea name="entry.702403180" id="entry.702403180" placeholder="Messaggio ..."/>
+<textarea name="entry.702403180" id="entry.702403180" placeholder="Messaggio ..."/></textarea>
 <input type="button" id="submit" value="Invia"/>
 </form>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Richiesta inviata...');
-  });
-</script>
 
 </div>
 </body>
